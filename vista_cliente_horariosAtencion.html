@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario de Citas</title>
+    <link rel="stylesheet" href="BootStrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/locales/es.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                locale: 'es',
+                headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                },
+                events: [
+                    {
+                        title: 'Doctor A - Disponible',
+                        start: '2024-07-15',
+                        end: '2024-07-16',
+                        color: 'green'
+                    },
+                    {
+                        title: 'Doctor B - Disponible',
+                        start: '2024-07-18',
+                        end: '2024-07-18',
+                        color: 'blue'
+                    },
+                    // Agrega más eventos aquí
+                ],
+                dateClick: function(info) {
+                    alert('Fecha: ' + info.dateStr + '\nEl doctor está disponible');
+                }
+            });
+            calendar.render();
+        });
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Vet-Care</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="interfaz_cliente.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href=" ">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="vista_cliente_horariosAtencion.html">Calendario de atención</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="vista_cliente_agendar._cita.html">Agendar cita</a>
+                    </li>
+                </ul>
+                <form class="d-flex ms-auto" role="search">
+                    <button class="btn btn-primary"><a class="link text-white" href="index.html">Cerrar Sesión</a></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container mt-5">
+        <h2>Calendario de Citas</h2>
+        <div id="calendar"></div>
+    </div>
+
+    <footer class="footer mt-5">
+        <div class="container">
+            <table class="table">
+                <tr>
+                    <td>
+                        <i class="fa-solid fa-paw"></i> Clínica veterinaria Vet-Care <br>
+                        <a href="https://maps.app.goo.gl/d14GZzhNJN4TarWX7"><i class="fa-solid fa-location-dot"></i> Ubicación</a><br>
+                        <i class="fa-solid fa-phone"></i> Teléfono: 5566529963 <br>
+                        <a href="https://www.facebook.com/share/x2J69T1K1DYRMaFu/?mibextid=qi2Omg"><i class="fa-brands fa-square-facebook"></i> Vet-Care</a>
+                    </td>
+                    <td>
+                        &#169; The Doctors.cat
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </footer>
+
+    <script src="BootStrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/bf9ae79ad3.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Cita</title>
+    <link rel="stylesheet" href="BootStrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <style>
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+    <script>
+        // Función para establecer restricciones en la fecha
+        function setMinDate() {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('appointmentDate').setAttribute('min', today);
+        }
+        
+        // Función para establecer restricciones en la hora
+        function setMinTime() {
+            const appointmentTime = document.getElementById('appointmentTime');
+            appointmentTime.addEventListener('change', function() {
+                const time = appointmentTime.value.split(':');
+                const hours = parseInt(time[0], 10);
+                const minutes = parseInt(time[1], 10);
+
+                if (hours < 7 || hours > 19 || (hours === 19 && minutes > 0)) {
+                    appointmentTime.setCustomValidity('Por favor, elija una hora entre 07:00 AM y 07:00 PM');
+                } else {
+                    appointmentTime.setCustomValidity('');
+                }
+            });
+        }
+        
+        // Inicializar restricciones cuando la página carga
+        window.onload = function() {
+            setMinDate();
+            setMinTime();
+        };
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <img src="imagenes/Imagen17.png" width="10%">
+                <a class="navbar-brand" href="#">Vet-Care</a>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="interfaz_cliente.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="vista_cliente_horariosAtencion.html">Calendario de atención</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="vista_cliente_agendar._cita.html">Agendar cita</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <button class="btn btn-primary"><a class="link text-white" href="index.html">Cerrar Sesión</a></button>&nbsp;
+                </form>
+            </div>
+        </div>
+    </nav><br>
+
+    <div class="container">
+        <div class="profile-container">
+            <img src="imagenes/Selene.jpg" alt="Foto de Perfil" class="profile-img">
+            <h2 class="mt-3">Bienvenido</h2>
+            <p>Numero de cliente: 1212</p>
+            <p>Teléfono: 5554342345</p>
+            <p>Dirección: Av. Encanto #56, Ciudad Peluche</p>
+        </div>
+
+    <div class="container mt-5">
+        <h2>Agendar Cita</h2>
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="name" placeholder="Nombre" required>
+            </div>
+            <div class="mb-3">
+                <label for="appointmentDate" class="form-label">Fecha Deseada de la Cita</label>
+                <input type="date" class="form-control" id="appointmentDate" required>
+            </div>
+            <div class="mb-3">
+                <label for="appointmentTime" class="form-label">Horario de la Cita</label>
+                <input type="time" class="form-control" id="appointmentTime" min="07:00" max="19:00" required>
+            </div>
+            <div class="mb-3">
+                <label for="reason" class="form-label">Motivo de la Cita</label>
+                <textarea class="form-control" id="reason" rows="3" placeholder="Motivo de la cita" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Agendar Cita</button>
+        </form>
+    </div>
+
+    <footer class="footer mt-5">
+        <div class="container">
+            <table class="table">
+                <tr>
+                    <td>
+                        <i class="fa-solid fa-paw"></i> Clínica veterinaria Vet-Care <br>
+                        <a href="https://maps.app.goo.gl/d14GZzhNJN4TarWX7"><i class="fa-solid fa-location-dot"></i> Ubicación</a><br>
+                        <i class="fa-solid fa-phone"></i> Teléfono: 5566529963 <br>
+                        <a href="https://www.facebook.com/share/x2J69T1K1DYRMaFu/?mibextid=qi2Omg"><i class="fa-brands fa-square-facebook"></i> Vet-Care</a>
+                    </td>
+                    <td>
+                        &#169; The Doctors.cat
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </footer>
+
+    <script src="BootStrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/bf9ae79ad3.js" crossorigin="anonymous"></script>
+</body>
+</html>

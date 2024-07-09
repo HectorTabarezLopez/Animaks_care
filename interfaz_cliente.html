@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Administrador</title>
+    <link rel="stylesheet" href="BootStrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <style>
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <img src="imagenes/Imagen17.png" width="10%">
+                <a class="navbar-brand" href="#">Vet-Care</a>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="interfaz_cliente.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="vista_cliente_horariosAtencion.html">Calendario de atencion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="vista_cliente_agendar._cita.html">Agendar cita</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <button class="btn btn-primary"><a class="link text-white" href="index.html">Cerrar Sesión</a></button>&nbsp;
+                </form>
+            </div>
+        </div>
+    </nav><br>
+
+    <div class="container">
+        <div class="profile-container">
+            <img src="imagenes/Selene.jpg" alt="Foto de Perfil" class="profile-img">
+            <h2 class="mt-3">Bienvenido</h2>
+            <p>Numero de cliente: 1212</p>
+            <p>Teléfono: 5554342345</p>
+            <p>Dirección: Av. Encanto #56, Ciudad Peluche</p>
+        </div>
+
+        <br><br>
+        <h3>Accesos Rápidos</h3>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="card">
+                    <img src="imagenes/Cirugia.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Inicio</h5>
+                        <button class="btn btn-primary"><a href="interfaz_cliente.html" class="link text-white">Ver</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="imagenes/revision.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Servicios</h5>
+                        <button class="btn btn-primary"><a href="lis_empleados.html" class="link text-white">Ver</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="imagenes/consulta.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Calendario de atencion</h5>
+                        <button class="btn btn-primary"><a href="vista_cliente_horariosAtencion.html" class="link text-white">Ver</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="imagenes/Estudios.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Agendar cita</h5>
+                        <button class="btn btn-primary"><a href="vista_cliente_agendar._cita.html" class="link text-white">Ver</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <footer class="footer">
+            <table>
+                <tr>
+                    <td>
+                        <i class="fa-solid fa-paw"></i> Clínica veterinaria Vet- Care <br>
+                        <a href="https://maps.app.goo.gl/d14GZzhNJN4TarWX7"><i class="fa-solid fa-location-dot"></i> Ubicación </a><br>
+                        <i class="fa-solid fa-phone"></i> Teléfono: 5566529963 <br>
+                        <a href="https://www.facebook.com/share/x2J69T1K1DYRMaFu/?mibextid=qi2Omg"><i class="fa-brands fa-square-facebook"></i> Vet-Care</a>
+                    </td>
+                    <td>
+                        &#169; The Doctors.cat
+                    </td>
+                </tr>
+            </table>
+        </footer>
+    </div>
+
+    <script src="BootStrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/bf9ae79ad3.js" crossorigin="anonymous"></script>
+</body>
+</html>

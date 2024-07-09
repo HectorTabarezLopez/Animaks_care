@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="BootStrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <img src="imagenes/Imagen17.png" width="10%">
+            <a class="navbar-brand" href="#">Vet-Care</a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="interfaz_admin.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="lis_clientes.html">Clientes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="lis_servicios.html">Servicios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="lis_mascotas.html">Mascota</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="lis_empleados.html">Empleados</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="cita.html">Citas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="historial.html">Historial medico</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <button class="btn btn-primary" ><a class="link" href="index.html">Cerrar Sesión</a></button>&nbsp;
+              </form>
+          </div>
+        </div>
+      </nav><br>
+      <div class="container">
+        <div class="card">
+            <div class="card-header">
+              Listado de Mascotas
+            </div>
+            <div class="card-body">
+                <button class="btn btn-primary" ><a href="form_mascotas.html" class="link">Agregar</a></button>
+            <hr>
+            <div>
+                <table class="table table-bordered table-striped table-hover">
+                    <thead class="bg-primary">
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Raza</th>
+                        <th scope="col">Sexo</th>
+                        <th scope="col">Edad</th>
+                        <th scope="col">Vacunas aplicadas</th>
+                        <th scope="col">Numero de Cirugias realizadas</th>
+                        <th scope="col">ID_Cliente</th>
+                        <th scope="col" colspan="2">Operaciones</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">01</th>
+                        <td>Cloe</td>
+                        <td>Chihuahua</td>
+                        <td>Hembra</td>
+                        <td>1 año 2meses</td>
+                        <td>3</td>
+                        <td>0</td>
+                        <th scope="row">06</th>
+                        <td>
+                            <a href="eliminar_mascota.html">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="form_mascotas.html">
+                                <i class="fa-solid fa-user-pen"></i>
+                            </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">02</th>
+                        <td>Max</td>
+                        <td>Golden Retriber</td>
+                        <td>Macho</td>
+                        <td>3años</td>
+                        <td>6</td>
+                        <td>2</td>
+                        <th scope="row">04</th>
+                        <td>
+                          <a href="eliminar_mascota.html">
+                              <i class="fa-solid fa-trash-can"></i>
+                          </a>
+                      </td>
+                      <td>
+                          <a href="form_mascotas.html">
+                              <i class="fa-solid fa-user-pen"></i>
+                          </a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">03</th>
+                        <td>Capuchino</td>
+                        <td>Chihuahua</td>
+                        <td>Macho</td>
+                        <td>1año y 3 meses</td>
+                        <td>6</td>
+                        <td>0</td>
+                        <th scope="row">05</th>
+                        <td>
+                          <a href="eliminar_mascota.html">
+                              <i class="fa-solid fa-trash-can"></i>
+                          </a>
+                      </td>
+                      <td>
+                          <a href="form_mascotas.html">
+                              <i class="fa-solid fa-user-pen"></i>
+                          </a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">04</th>
+                        <td>Poli</td>
+                        <td>Chihuahua</td>
+                        <td>Hembra</td>
+                        <td>2años</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <th scope="row">01</th>
+                        <td>
+                          <a href="eliminar_mascota.html">
+                              <i class="fa-solid fa-trash-can"></i>
+                          </a>
+                      </td>
+                      <td>
+                          <a href="form_mascotas.html">
+                              <i class="fa-solid fa-user-pen"></i>
+                          </a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">05</th>
+                        <td>Niña</td>
+                        <td>Gato de angora</td>
+                        <td>Hembra</td>
+                        <td>4años</td>
+                        <td>4</td>
+                        <td>1</td>
+                        <th scope="row">03</th>
+                        <td>
+                          <a href="eliminar_mascota.html">
+                              <i class="fa-solid fa-trash-can"></i>
+                          </a>
+                      </td>
+                      <td>
+                          <a href="form_mascotas.html">
+                              <i class="fa-solid fa-user-pen"></i>
+                          </a>
+                      </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">06</th>
+                        <td>Pulgas</td>
+                        <td>Cruza</td>
+                        <td>Macho</td>
+                        <td>4años</td>
+                        <td>6</td>
+                        <td>0</td>
+                        <th scope="row">02</th>
+                        <td>
+                          <a href="eliminar_mascota.html">
+                              <i class="fa-solid fa-trash-can"></i>
+                          </a>
+                      </td>
+                      <td>
+                          <a href="form_mascotas.html">
+                              <i class="fa-solid fa-user-pen"></i>
+                          </a>
+                      </td>
+                      </tr>
+                    </tbody>
+                   
+                  </table>
+            </div>
+            </div>
+          </div><br>
+        </div>
+        <footer class="footer">
+            <table>
+                <tr>
+                    <td>
+                        <i class="fa-solid fa-paw"></i> Clinica veterinaria Vet- Care <br>
+                        <a href="https://maps.app.goo.gl/d14GZzhNJN4TarWX7"><i class="fa-solid fa-location-dot"></i> Ubicación </a><br>
+                        <i class="fa-solid fa-phone"></i> Teléfono:5566529963 <br>
+                        <a href="https://www.facebook.com/share/x2J69T1K1DYRMaFu/?mibextid=qi2Omg"><i class="fa-brands fa-square-facebook"></i> Vet-Care</a>
+                    </td>
+                    <td>
+                        &#169; The Doctors.cat
+                    </td>
+                </tr>
+              </table>
+          </footer>
+        <script src="BootStrap/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/bf9ae79ad3.js" crossorigin="anonymous"></script>
+</body>
+</html>
